@@ -16,16 +16,16 @@ public class Employee {
     }
 
     // TODO: Create getters and setters
-    private String getName() {
+    public String getName() {
         return name;
     }
-    private int getAge() {
+    public int getAge() {
         return age;
     }
-    protected double getSalary() {
+    public double getSalary() {
         return salary;
     }
-    private String getDepartment() {
+    public String getDepartment() {
         return department;
     }
 
@@ -48,7 +48,7 @@ public class Employee {
                 "name='" + name + '\'' +
                 ", age=" + age +
                 ", salary=" + salary +
-                "department=" + department +"}";
+                ", department=" + department +"}";
     }
     // TODO: Override toString() method
 
@@ -62,11 +62,11 @@ public class Employee {
         Employee employee1 = new Employee("Alice", 30, 50000, "HR");
         Employee employee2 = new Employee("Bob", 25, 60000, "IT");
         Employee employee3 = new Employee("Charlie", 35, 70000, "Finance");
-        employee1.calculateBonus();
-        employee2.calculateBonus();
-        employee3.calculateBonus();
-        employee1.toString();
-        employee2.toString();
-        employee3.toString();
+        System.out.printLn("Employee 1 Bonus: " + employee1.calculateBonus());
+        System.out.printLn("Employee 2 Bonus: " + employee2.calculateBonus());
+        System.out.printLn("Employee 3 Bonus: " + employee3.calculateBonus());
+        System.out.printLn(employee1.toString());
+        System.out.printLn(employee2.toString());
+        System.out.printLn(employee3.toString());
     }
 }
