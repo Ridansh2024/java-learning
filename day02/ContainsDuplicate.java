@@ -5,14 +5,17 @@
 // at least twice in the array, and return false if every element is distinct.
 
 import java.util.HashSet;
+import java.util.Set;
 
 public class ContainsDuplicate {
 
     public boolean containsDuplicate(int[] nums) {
-        // TODO: Solve using HashSet
-        // Hint: Add each number to HashSet
-        //       If add() returns false → duplicate found!
-        // Alternative: if set.contains(num) before adding → duplicate
+        Set<Integer> seen = new HashSet<>();
+        for (int num : nums) {
+            if (!seen.add(num)) {
+                return true; // Duplicate found
+            }
+        }
 
         return false;
     }

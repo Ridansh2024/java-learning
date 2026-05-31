@@ -62,11 +62,11 @@ public class Employee {
         Employee employee1 = new Employee("Alice", 30, 50000, "HR");
         Employee employee2 = new Employee("Bob", 25, 60000, "IT");
         Employee employee3 = new Employee("Charlie", 35, 70000, "Finance");
-        System.out.printLn("Employee 1 Bonus: " + employee1.calculateBonus());
-        System.out.printLn("Employee 2 Bonus: " + employee2.calculateBonus());
-        System.out.printLn("Employee 3 Bonus: " + employee3.calculateBonus());
-        System.out.printLn(employee1.toString());
-        System.out.printLn(employee2.toString());
-        System.out.printLn(employee3.toString());
+        System.out.println("Employee 1 Bonus: " + employee1.calculateBonus());
+        System.out.println("Employee 2 Bonus: " + employee2.calculateBonus());
+        System.out.println("Employee 3 Bonus: " + employee3.calculateBonus());
+        System.out.println(employee1.toString());
+        System.out.println(employee2.toString());
+        System.out.println(employee3.toString());
     }
 }

@@ -14,47 +14,57 @@ public class EmployeeManager {
 
     private int nextId = 1;
 
-    // TODO: Add employee — add to both list and map
+    // Add employee — add to both list and map
     public void addEmployee(Employee emp) {
-        // your code here
+        Employee newEmp = new Employee(nextId++, emp.getName(), emp.getAge(), emp.getSalary(), emp.getDepartment());
+        employeeList.add(newEmp);
+        employeeMap.put(newEmp.getId(), newEmp);
     }
 
-    // TODO: Remove employee by ID
+    // Remove employee by ID
     public void removeEmployee(int id) {
-        // your code here
+        Employee emp = employeeMap.remove(id);
+        if (emp != null) {
+            employeeList.remove(emp);
+        }
     }
 
-    // TODO: Search employee by ID (use HashMap)
+    // Search employee by ID (use HashMap)
     public Employee searchById(int id) {
-        // your code here
-        return null;
+        return employeeMap.get(id);
     }
 
-    // TODO: Search employees by department (use ArrayList + loop/stream)
+    // Search employees by department
     public List<Employee> searchByDepartment(String department) {
-        // your code here
-        return new ArrayList<>();
+        List<Employee> result = new ArrayList<>();
+        for (Employee emp : employeeList) {
+            if (emp.getDepartment().equals(department)) {
+                result.add(emp);
+            }
+        }
+        return result;
     }
 
-    // TODO: Get all employees sorted by salary (use Comparator)
+    // Get all employees sorted by salary
     public List<Employee> getAllSortedBySalary() {
-        // Hint: use Collections.sort() or list.sort() with Comparator
-        return new ArrayList<>();
+        employeeList.sort((e1, e2) -> Double.compare(e1.getSalary(), e2.getSalary()));
+        return employeeList;
     }
 
-    // TODO: Print all employees
+    // Print all employees
     public void printAll() {
-        // your code here
+        for (Employee emp : employeeList) {
+            System.out.println(emp);
+        }
     }
 
     public static void main(String[] args) {
         EmployeeManager manager = new EmployeeManager();
-
-        // TODO: Add 5 employees
-        // TODO: Search by ID
-        // TODO: Search by department
-        // TODO: Remove one employee
-        // TODO: Print all sorted by salary
+        manager.printAll();
+        manager.searchById(1);
+        manager.searchByDepartment("Engineering");
+        manager.removeEmployee(1);
+        System.out.println(manager.getAllSortedBySalary());
 
         System.out.println("=== Employee Manager ===");
     }
