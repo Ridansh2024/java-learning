@@ -17,8 +17,23 @@ public class ValidAnagram {
         // Step 2: Count each character in 's' → put in map
         // Step 3: For each character in 't' → decrease count in map
         // Step 4: If any count goes below 0 → return false
-
-        return false;
+        if(s.length() != t.length()) {
+            return false;
+        }
+        HashMap<Character, Integer> map = new HashMap<>();
+        for (char ch: s.toCharArray()) {
+            map.put(ch, map.getOrDefault(ch , 0) + 1);
+        }
+        for(char ch: t.toCharArray()) {
+            if(!map.containsKey(ch)) {
+                return false;
+            }
+            map.put(ch, map.get(ch) - 1);
+            if(map.get(ch) < 0) {
+                return false;
+            }
+        }
+        return true;
     }
 
     // Approach 2 (Bonus): Using int array (faster for only lowercase letters)
@@ -28,8 +43,19 @@ public class ValidAnagram {
         //       count[ch - 'a']++ for s
         //       count[ch - 'a']-- for t
         //       check all counts are 0
-
-        return false;
+        int[] count = new int[26];
+        for(char ch: s.toCharArray()){
+            count[ch - 'a']++;
+        }
+        for(char ch : t.toCharArray()) {
+            count[ch - 'a']--;
+        }
+        for (int i = 0; i < count.length; i++) {
+            if(count[i] != 0) {
+                return false;
+            }
+        }
+        return true;
     }
 
     public static void main(String[] args) {
@@ -39,5 +65,9 @@ public class ValidAnagram {
         System.out.println(solution.isAnagram("rat", "car"));         // Expected: false
         System.out.println(solution.isAnagram("listen", "silent"));   // Expected: true
         System.out.println(solution.isAnagram("hello", "world"));     // Expected: false
+        System.out.println(solution.isAnagramArray("anagram", "nagaram"));
+        System.out.println(solution.isAnagramArray("rat", "car"));         // Expected: false
+        System.out.println(solution.isAnagramArray("listen", "silent"));   // Expected: true
+        System.out.println(solution.isAnagramArray("hello", "world"));
     }
 }

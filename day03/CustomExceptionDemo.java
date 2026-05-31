@@ -8,6 +8,7 @@ class InsufficientBalanceException extends Exception {
     // TODO: Constructor that takes available and requested amount
     public InsufficientBalanceException(double available, double requested) {
         // Hint: super("your message here");
+        super("Insufficient balance! Available: ₹" + available + ", Requested: ₹" + requested);
     }
 }
 
@@ -15,6 +16,7 @@ class InsufficientBalanceException extends Exception {
 class InvalidAgeException extends RuntimeException {
     public InvalidAgeException(String message) {
         // your code here
+        super(message);
     }
 }
 
@@ -31,11 +33,19 @@ class BankAccount {
     // TODO: withdraw() method — throw InsufficientBalanceException if amount > balance
     public void withdraw(double amount) throws InsufficientBalanceException {
         // your code here
+        if(amount > balance) {
+            throw new InsufficientBalanceException(this.balance, amount);
+        }
+        this.balance -= amount;
     }
 
     // TODO: deposit() method — throw IllegalArgumentException if amount <= 0
     public void deposit(double amount) {
         // your code here
+        if(amount < 0) {
+            throw new IllegalArgumentException("Deposit amount must be positive!");
+        }
+        this.balance += amount;
     }
 
     public double getBalance() {
@@ -51,12 +61,20 @@ class EmployeeWithValidation {
     // TODO: Constructor — throw InvalidAgeException if age < 18 or > 65
     public EmployeeWithValidation(String name, int age) {
         // your code here
+        this.name = name;
+        this.age = age;
     }
 }
 
 public class CustomExceptionDemo {
     public static void main(String[] args) {
         System.out.println("=== Custom Exception Demo ===");
+        BankAccount bankAccount = new BankAccount("John Doe", 5000);
+        bankAccount.withdraw(10000);
+        bankAccount.deposit(3000);
+        bankAccount.withdraw(2000);
+        EmployeeWithValidation employeeWithValidation = new EmployeeWithValidation("John Doe", 25);
+        EmployeeWithValidation employeeWithValidation1 = new EmployeeWithValidation("John Doe", 15);
 
         // TODO: Test BankAccount
         // Create account with ₹5000
