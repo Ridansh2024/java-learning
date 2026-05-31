@@ -1,11 +1,11 @@
 # Day 3 Notes
 
 ## Topics Covered
-- [ ] Exception Handling — try/catch/finally
-- [ ] throw vs throws
-- [ ] Checked vs Unchecked exceptions
+- [x] Exception Handling — try/catch/finally
+- [x] throw vs throws
+- [x] Checked vs Unchecked exceptions
 - [ ] Custom Exception classes
-- [ ] LeetCode #242 Valid Anagram
+- [x] LeetCode #242 Valid Anagram
 
 ## Key Concepts
 
@@ -28,7 +28,25 @@ Throwable
 | throws | Method signature | Declare that method CAN throw |
 
 ## What I Learned
-(Write here after completing)
+
+### Exception Handling
+- `try` block contains risky code that might throw an exception
+- `catch` block handles the specific exception
+- `finally` block ALWAYS runs (cleanup code)
+- `throw` creates and throws an exception inside a method
+- `throws` declares that a method might throw an exception (caller must handle)
+
+### Valid Anagram (LeetCode #242)
+- **Approach 1: HashMap** — count chars in `s`, decrease for `t`, check no count < 0
+- **Approach 2: int[26] array** — increment for `s`, decrement for `t`, check all zeros
+
+### Time Complexity
+| Approach | Time | Space |
+|----------|------|-------|
+| Brute force (nested loops) | O(n²) | O(1) |
+| Sorting both strings | O(n log n) | O(n) |
+| HashMap | O(n) | O(n) |
+| int[26] array | O(n) | O(1) ← best |
 
 ## Doubts / Questions
 (Write here — ask Copilot tomorrow)
