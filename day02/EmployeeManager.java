@@ -37,6 +37,8 @@ public class EmployeeManager {
     // Search employees by department
     public List<Employee> searchByDepartment(String department) {
         List<Employee> result = new ArrayList<>();
+
+        result.stream().filter()
         for (Employee emp : employeeList) {
             if (emp.getDepartment().equals(department)) {
                 result.add(emp);
