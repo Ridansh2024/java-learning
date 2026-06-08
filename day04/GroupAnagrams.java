@@ -15,13 +15,17 @@ public class GroupAnagrams {
     // "bat" sorted = "abt"  → different key → different group
 
     public List<List<String>> groupAnagrams(String[] strs) {
-        // TODO: Solve using HashMap<String, List<String>>
-        // Step 1: Create HashMap — key = sorted word, value = list of anagrams
-        // Step 2: For each word → sort it → use as key
-        // Step 3: Add original word to the list for that key
-        // Step 4: Return all values from map
-
-        return new ArrayList<>();
+        Map <String, List<String>> map = new HashMap<>();
+        for(String word: strs) {
+            char [] chars = word.toCharArray();
+            Arrays.sort(chars);
+            String sorted = new String(chars);
+            if(!map.containsKey(sorted)) {
+                map.put(sorted, new ArrayList<>());
+            }
+            map.get(sorted).add(word);
+        }
+        return new ArrayList<>(map.values());
     }
 
     public static void main(String[] args) {

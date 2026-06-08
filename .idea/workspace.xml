@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="530b7da4-b27b-4b75-9248-c3b3064ffd83" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/day01/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/day01/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day01/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/day01/Manager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day01/TwoSum.java" beforeDir="false" afterPath="$PROJECT_DIR$/day01/TwoSum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day04/GenericsDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/day04/GenericsDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day04/GroupAnagrams.java" beforeDir="false" afterPath="$PROJECT_DIR$/day04/GroupAnagrams.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day04/StreamsExercise.java" beforeDir="false" afterPath="$PROJECT_DIR$/day04/StreamsExercise.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,10 +53,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8,
-  "fromUser": false
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8,
+  &quot;fromUser&quot;: false
+}</component>
   <component name="ProjectId" id="3ENiLXKtii4HuaaOJfsG0i2SuAi" />
   <component name="ProjectSessionTemplates">
     <option name="panelTemplate">
@@ -75,20 +76,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.TwoSum.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.TwoSum.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="TwoSum" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="TwoSum" />
@@ -119,6 +121,8 @@
       <option name="presentableId" value="Default" />
       <updated>1780025373312</updated>
       <workItem from="1780025374322" duration="29679000" />
+      <workItem from="1780665699159" duration="3916000" />
+      <workItem from="1780720629118" duration="12157000" />
     </task>
     <servers />
   </component>
